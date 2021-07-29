@@ -13,3 +13,7 @@ func Process(ctx context.Context, in io.Reader, out io.Writer) error{
 		}
 	}
 }
+
+func Add(arg1 int, arg2 int) int {
+	return arg1 + arg2
+}
