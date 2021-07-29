@@ -1,8 +1,11 @@
 package pack
 
-import "io"
+import (
+	"context"
+	"io"
+)
 
-func Process(in io.Reader, out io.Writer) error{
+func Process(ctx context.Context, in io.Reader, out io.Writer) error{
 	for {
 		_, err := io.Copy(out, in)
 		if err != nil {
